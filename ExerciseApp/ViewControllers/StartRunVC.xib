@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StartRunVC" customModule="ExerciseApp" customModuleProvider="target">
+            <connections>
+                <outlet property="mapView" destination="gPN-tC-dxS" id="4l5-iH-339"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gPN-tC-dxS">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
+                </mapView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gwc-SA-0dM">
+                    <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                    <color key="backgroundColor" red="0.95294117647058818" green="0.6470588235294118" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="eTz-QA-Ujw"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="30"/>
+                    <state key="normal" title="START">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="startRunning:" destination="-1" eventType="touchUpInside" id="dDi-1Z-T8S"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="gPN-tC-dxS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="21b-dw-73v"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gPN-tC-dxS" secondAttribute="trailing" id="IEq-Yz-6tA"/>
+                <constraint firstItem="gPN-tC-dxS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="KOj-dB-bLa"/>
+                <constraint firstItem="Gwc-SA-0dM" firstAttribute="top" secondItem="gPN-tC-dxS" secondAttribute="bottom" id="KOn-H2-gnD"/>
+                <constraint firstItem="Gwc-SA-0dM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Osh-6O-S4d"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Gwc-SA-0dM" secondAttribute="trailing" id="hyW-E0-JaB"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Gwc-SA-0dM" secondAttribute="bottom" id="zsN-9X-Kh9"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="53.600000000000001" y="48.125937031484263"/>
+        </view>
+    </objects>
+</document>

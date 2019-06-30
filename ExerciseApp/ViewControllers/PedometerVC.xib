@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PedometerVC" customModule="ExerciseApp" customModuleProvider="target">
+            <connections>
+                <outlet property="calorieLabel" destination="5R5-Pf-RGM" id="ByZ-h0-1kh"/>
+                <outlet property="chartView" destination="fk6-9N-5Pa" id="MUL-RK-aD6"/>
+                <outlet property="distanceLabel" destination="eeB-ZF-2ih" id="wlm-ph-q82"/>
+                <outlet property="stepLabel" destination="JPc-mk-9WS" id="JYX-ja-ikk"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uzC-bh-Qhp">
+                    <rect key="frame" x="5" y="5" width="365" height="657"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ffp-6V-T8K">
+                            <rect key="frame" x="0.0" y="0.0" width="365" height="225.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- -" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JPc-mk-9WS">
+                                    <rect key="frame" x="154.5" y="74.5" width="56" height="77"/>
+                                    <fontDescription key="fontDescription" name="OriyaSangamMN-Bold" family="Oriya Sangam MN" pointSize="55"/>
+                                    <color key="textColor" white="0.14181704810000001" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STEPS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xce-6o-K6C">
+                                    <rect key="frame" x="160" y="159.5" width="45" height="20"/>
+                                    <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="14"/>
+                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon_step" translatesAutoresizingMaskIntoConstraints="NO" id="iju-QA-4Cy">
+                                    <rect key="frame" x="170" y="32.5" width="25" height="25"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="25" id="ApV-XF-Lk5"/>
+                                        <constraint firstAttribute="width" constant="25" id="qSl-hD-Qia"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="iju-QA-4Cy" firstAttribute="centerY" secondItem="ffp-6V-T8K" secondAttribute="centerY" multiplier="1:2.5" id="5YG-R4-4vc"/>
+                                <constraint firstItem="iju-QA-4Cy" firstAttribute="centerX" secondItem="ffp-6V-T8K" secondAttribute="centerX" id="M6a-qf-olJ"/>
+                                <constraint firstItem="JPc-mk-9WS" firstAttribute="centerY" secondItem="ffp-6V-T8K" secondAttribute="centerY" id="Q6U-ra-XAG"/>
+                                <constraint firstItem="Xce-6o-K6C" firstAttribute="centerY" secondItem="ffp-6V-T8K" secondAttribute="centerY" multiplier="1.5:1" id="XIy-IQ-Wvy"/>
+                                <constraint firstItem="JPc-mk-9WS" firstAttribute="centerX" secondItem="ffp-6V-T8K" secondAttribute="centerX" id="i87-mY-vdy"/>
+                                <constraint firstItem="Xce-6o-K6C" firstAttribute="centerX" secondItem="ffp-6V-T8K" secondAttribute="centerX" id="tcd-IX-5Kt"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PW4-Qi-x0u">
+                            <rect key="frame" x="0.0" y="230.5" width="365" height="150.5"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WWy-44-To6">
+                                    <rect key="frame" x="0.0" y="0.0" width="180" height="150.5"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- -" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5R5-Pf-RGM">
+                                            <rect key="frame" x="79" y="55.5" width="22" height="40"/>
+                                            <fontDescription key="fontDescription" name="MyanmarSangamMN-Bold" family="Myanmar Sangam MN" pointSize="25"/>
+                                            <color key="textColor" red="0.10588235294117647" green="0.10588235294117647" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon_calory" translatesAutoresizingMaskIntoConstraints="NO" id="h9h-uh-kd1">
+                                            <rect key="frame" x="80" y="20.5" width="20" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20" id="5ur-Fa-Jwo"/>
+                                                <constraint firstAttribute="width" constant="20" id="qNx-YM-caH"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CALORIES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qa6-fS-NAm">
+                                            <rect key="frame" x="57.5" y="104" width="65.5" height="18.5"/>
+                                            <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="13"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="5R5-Pf-RGM" firstAttribute="centerY" secondItem="WWy-44-To6" secondAttribute="centerY" id="ONX-EZ-mg8"/>
+                                        <constraint firstItem="h9h-uh-kd1" firstAttribute="centerY" secondItem="WWy-44-To6" secondAttribute="centerY" multiplier="1:2.5" id="P24-7k-Qoc"/>
+                                        <constraint firstItem="5R5-Pf-RGM" firstAttribute="centerX" secondItem="WWy-44-To6" secondAttribute="centerX" id="TpB-Oa-GCo"/>
+                                        <constraint firstItem="Qa6-fS-NAm" firstAttribute="centerX" secondItem="WWy-44-To6" secondAttribute="centerX" id="hhc-9f-1aX"/>
+                                        <constraint firstItem="h9h-uh-kd1" firstAttribute="centerX" secondItem="WWy-44-To6" secondAttribute="centerX" id="iEz-Dy-62g"/>
+                                        <constraint firstItem="Qa6-fS-NAm" firstAttribute="centerY" secondItem="WWy-44-To6" secondAttribute="centerY" multiplier="1.5:1" id="kor-DU-is6"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SyR-IG-K84">
+                                    <rect key="frame" x="185" y="0.0" width="180" height="150.5"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- -" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eeB-ZF-2ih">
+                                            <rect key="frame" x="79" y="55.5" width="22" height="40"/>
+                                            <fontDescription key="fontDescription" name="MyanmarSangamMN-Bold" family="Myanmar Sangam MN" pointSize="25"/>
+                                            <color key="textColor" white="0.22574640551643188" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="METERS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8e-xA-2id">
+                                            <rect key="frame" x="61" y="103" width="58.5" height="20"/>
+                                            <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="14"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon_distance" translatesAutoresizingMaskIntoConstraints="NO" id="PEW-vf-GAY">
+                                            <rect key="frame" x="80" y="23" width="20" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20" id="OJL-Bd-cu0"/>
+                                                <constraint firstAttribute="width" constant="20" id="UmU-NA-bDs"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="eeB-ZF-2ih" firstAttribute="centerX" secondItem="SyR-IG-K84" secondAttribute="centerX" id="0CQ-5h-go4"/>
+                                        <constraint firstItem="PEW-vf-GAY" firstAttribute="centerY" secondItem="SyR-IG-K84" secondAttribute="centerY" multiplier="1:2.3" id="2v3-au-6Lh"/>
+                                        <constraint firstItem="eeB-ZF-2ih" firstAttribute="centerY" secondItem="SyR-IG-K84" secondAttribute="centerY" id="5OO-Df-rdg"/>
+                                        <constraint firstItem="V8e-xA-2id" firstAttribute="centerY" secondItem="SyR-IG-K84" secondAttribute="centerY" multiplier="1.5:1" id="Deq-02-Nj4"/>
+                                        <constraint firstItem="PEW-vf-GAY" firstAttribute="centerX" secondItem="SyR-IG-K84" secondAttribute="centerX" id="NR8-HI-8Y9"/>
+                                        <constraint firstItem="V8e-xA-2id" firstAttribute="centerX" secondItem="SyR-IG-K84" secondAttribute="centerX" id="oIv-EO-fYE"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="WWy-44-To6" firstAttribute="leading" secondItem="PW4-Qi-x0u" secondAttribute="leading" id="3hZ-PQ-4YJ"/>
+                                <constraint firstItem="WWy-44-To6" firstAttribute="top" secondItem="PW4-Qi-x0u" secondAttribute="top" id="88r-T3-4Uc"/>
+                                <constraint firstAttribute="trailing" secondItem="SyR-IG-K84" secondAttribute="trailing" id="8DV-Ze-0NC"/>
+                                <constraint firstItem="SyR-IG-K84" firstAttribute="top" secondItem="PW4-Qi-x0u" secondAttribute="top" id="Edq-3i-1F1"/>
+                                <constraint firstItem="SyR-IG-K84" firstAttribute="width" secondItem="WWy-44-To6" secondAttribute="width" id="Kmh-3y-iZI"/>
+                                <constraint firstAttribute="bottom" secondItem="WWy-44-To6" secondAttribute="bottom" id="drJ-lS-uPm"/>
+                                <constraint firstItem="SyR-IG-K84" firstAttribute="leading" secondItem="WWy-44-To6" secondAttribute="trailing" constant="5" id="oNg-ZH-FPR"/>
+                                <constraint firstAttribute="bottom" secondItem="SyR-IG-K84" secondAttribute="bottom" id="vTy-wH-gX5"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fk6-9N-5Pa" customClass="BarChartView" customModule="Charts">
+                            <rect key="frame" x="0.0" y="386" width="365" height="271"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="PW4-Qi-x0u" firstAttribute="top" secondItem="ffp-6V-T8K" secondAttribute="bottom" constant="5" id="9LA-pn-8Z7"/>
+                        <constraint firstAttribute="bottom" secondItem="fk6-9N-5Pa" secondAttribute="bottom" id="AuZ-Kn-yyP"/>
+                        <constraint firstAttribute="trailing" secondItem="fk6-9N-5Pa" secondAttribute="trailing" id="TaD-wX-XSi"/>
+                        <constraint firstItem="ffp-6V-T8K" firstAttribute="leading" secondItem="uzC-bh-Qhp" secondAttribute="leading" id="WS9-FD-v2c"/>
+                        <constraint firstItem="PW4-Qi-x0u" firstAttribute="leading" secondItem="uzC-bh-Qhp" secondAttribute="leading" id="fWs-mY-f2n"/>
+                        <constraint firstAttribute="trailing" secondItem="ffp-6V-T8K" secondAttribute="trailing" id="hdG-qQ-6p3"/>
+                        <constraint firstItem="ffp-6V-T8K" firstAttribute="top" secondItem="uzC-bh-Qhp" secondAttribute="top" id="jLK-w1-T4K"/>
+                        <constraint firstItem="fk6-9N-5Pa" firstAttribute="top" secondItem="PW4-Qi-x0u" secondAttribute="bottom" constant="5" id="lVf-k7-Rmq"/>
+                        <constraint firstItem="fk6-9N-5Pa" firstAttribute="height" secondItem="ffp-6V-T8K" secondAttribute="height" multiplier="1.2:1" id="m8K-bJ-xgQ"/>
+                        <constraint firstAttribute="trailing" secondItem="PW4-Qi-x0u" secondAttribute="trailing" id="rkn-A9-RGM"/>
+                        <constraint firstItem="PW4-Qi-x0u" firstAttribute="height" secondItem="ffp-6V-T8K" secondAttribute="height" multiplier="1:1.5" id="vU8-5y-L0T"/>
+                        <constraint firstItem="fk6-9N-5Pa" firstAttribute="leading" secondItem="uzC-bh-Qhp" secondAttribute="leading" id="xbE-bj-95r"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.91222978796190679" green="0.91080379597141703" blue="0.93571232411554406" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uzC-bh-Qhp" secondAttribute="trailing" constant="5" id="Fho-4b-AUg"/>
+                <constraint firstItem="uzC-bh-Qhp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="PCu-Zd-hrh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="uzC-bh-Qhp" secondAttribute="bottom" constant="5" id="Z1y-s7-5iH"/>
+                <constraint firstItem="uzC-bh-Qhp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="5" id="eMb-hI-jF3"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="53.600000000000001" y="48.125937031484263"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Icon_calory" width="60" height="60"/>
+        <image name="Icon_distance" width="60" height="60"/>
+        <image name="Icon_step" width="60" height="60"/>
+    </resources>
+</document>
